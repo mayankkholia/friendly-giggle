@@ -32,4 +32,4 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}:${{ github.workspace }}/api:${{ github.workspace }}/api/pythonvssunday
         run: |
-          pytest
+          pytest -v
