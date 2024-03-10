@@ -30,6 +30,6 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Test with pytest
         env:
-          PYTHONPATH: $PWD:$PWD/api:$PWD/api/pythonvssunday
+          PYTHONPATH: ${{ github.workspace }}:${{ github.workspace }}/api:${{ github.workspace }}/api/pythonvssunday
         run: |
           pytest
